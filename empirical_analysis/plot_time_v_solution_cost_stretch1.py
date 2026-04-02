@@ -45,6 +45,9 @@ def main():
     print(f"Begin BSSF")
     timer = Timer(30)
     bssf_results = backtracking_bssf(edges, timer)
+    print(f"BSSF results: {len(bssf_results)}")
+    for r in bssf_results:
+        print(r.score, r.time)
 
     for result in random_results:
         random_times.append(result.time)
